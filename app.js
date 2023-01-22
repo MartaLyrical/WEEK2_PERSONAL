@@ -7,14 +7,13 @@ const app = express();
 
 app
   .use(bodyParser.json())
-  .use(bodyParser.urlencoded({ extended: true }))
   .use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     next();
   })
   .use("/", require("./routes"));
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
   if (err) {
     console.log(err);
   } else {
