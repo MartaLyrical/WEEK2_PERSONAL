@@ -28,6 +28,7 @@ const getSingle = async (req, res) => {
 
 const createContact = async (req, res) => {
   console.log("creating contact");
+  let db = getDb();
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -35,16 +36,14 @@ const createContact = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday,
   };
-  const response = await mongodb
-    .getDb()
-    .db("contacts")
-    .collection("contacts")
-    .insertOne(contact);
-  if (response.acknowledged) {
-    res.status(201).json(response);
-  } else {
-    res.status(500).json(response.error || "Error, contact not created");
-  }
+  db.collection("contacts")
+    .insertOne(contact)
+    .then((response) => {
+      res.status(201).json(response);
+    })
+    .catch((err) => {
+      res.status(500).json(err || "Error, contact not created");
+    });
 };
 
 const updateContact = async (req, res) => {
