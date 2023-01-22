@@ -61,7 +61,6 @@
     "depd": "^2.0.0",
     "destroy": "^1.2.0",
     "dot-prop": "^4.2.1",
-    "dotenv": "^16.0.3",
     "duplexer3": "^0.1.4",
     "ee-first": "^1.1.1",
     "encodeurl": "^1.0.2",
@@ -263,12 +262,13 @@
   "author": "Marta Alves",
   "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
+    "dotenv": "^16.0.3",
     "eslint": "^8.32.0",
-    "eslint-plugin-react": "^7.32.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "express": "^4.18.2",
     "mongodb": "^4.13.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
   }
 }

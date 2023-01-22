@@ -1,7 +1,7 @@
 const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
-const getAll = async (req, res, next) => {
+const getAll = async (req, res) => {
   const result = await mongodb
     .getDb()
     .db("contacts")
@@ -13,7 +13,7 @@ const getAll = async (req, res, next) => {
   });
 };
 
-const getSingle = async (req, res, next) => {
+const getSingle = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
@@ -27,6 +27,7 @@ const getSingle = async (req, res, next) => {
 };
 
 const createContact = async (req, res) => {
+  console.log("creating contact");
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -42,7 +43,7 @@ const createContact = async (req, res) => {
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
-    res.status(500).json(response.error || "Error, contact not created.");
+    res.status(500).json(response.error || "Error, contact not created");
   }
 };
 
