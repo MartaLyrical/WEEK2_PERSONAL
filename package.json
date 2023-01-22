@@ -128,6 +128,7 @@
     "isobject": "^3.0.1",
     "kind-of": "^6.0.3",
     "latest-version": "^3.1.0",
+    "lint": "^0.8.19",
     "lowercase-keys": "^1.0.1",
     "lru-cache": "^4.1.5",
     "make-dir": "^1.3.0",
@@ -262,8 +263,12 @@
   "author": "Marta Alves",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.20",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-plugin-react": "^7.32.1",
     "express": "^4.18.2",
-    "mongodb": "^4.13.0"
+    "mongodb": "^4.13.0",
+    "nodemon": "^2.0.20"
   }
 }
