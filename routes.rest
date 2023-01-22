@@ -10,7 +10,8 @@ GET http://localhost:8080/contacts/63c331c73ba3f6f8315a53ae
 
 ###
 #Create Contact
-POST http://localhost:8080/contacts HTTP/1.1 content-type: application/json
+POST http://localhost:8080/contacts HTTP/1.1 
+content-type: application/json
 {
     "firstName":"Sonia", 
     "lastName":"Pom", 
@@ -20,7 +21,9 @@ POST http://localhost:8080/contacts HTTP/1.1 content-type: application/json
 }
 ###
 #Update Contact
-PUT http://localhost:8080/contacts/63c331c73ba3f6f8315a53ae HTTP/1.1 content-type: application/json
+PUT http://localhost:8080/contacts/63c331c73ba3f6f8315a53ae 
+HTTP/1.1 
+content-type: application/json
 
 {
      "firstName": "Uriel",
@@ -32,7 +35,8 @@ PUT http://localhost:8080/contacts/63c331c73ba3f6f8315a53ae HTTP/1.1 content-typ
 
 ###
 #Delete Contact
-DELETE http://localhost:8080/contacts/6220b775099269ff7b31ceab HTTP/1.1
+DELETE http://localhost:8080/contacts/6220b775099269ff7b31ceab 
+HTTP/1.1
 
 // PRODUCTION Deploy
 ###
@@ -46,7 +50,9 @@ GET https://cs341-week-2-personal.onrender.com/contacts/63c331c73ba3f6f8315a53ae
 
 ###
 #Create Contact
-POST  https://cs341-week-2-personal.onrender.com/contacts HTTP/1.1 content-type: application/json
+POST  https://cs341-week-2-personal.onrender.com/contacts 
+HTTP/1.1 
+content-type: application/json
 {
     "firstName":"Sonia", 
     "lastName":"Pom", 
@@ -56,7 +62,9 @@ POST  https://cs341-week-2-personal.onrender.com/contacts HTTP/1.1 content-type:
 }
 ###
 #Update Contact
-PUT  https://cs341-week-2-personal.onrender.com/contacts/63c331c73ba3f6f8315a53ae HTTP/1.1 content-type: application/json
+PUT  https://cs341-week-2-personal.onrender.com/contacts/63c331c73ba3f6f8315a53ae 
+HTTP/1.1 
+content-type: application/json
 
 {
      "firstName": "Uriel",
