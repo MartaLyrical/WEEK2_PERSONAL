@@ -222,6 +222,7 @@
     "strip-json-comments": "^2.0.1",
     "strnum": "^1.0.5",
     "supports-color": "^5.5.0",
+    "swagger-ui-express": "^4.6.0",
     "term-size": "^1.2.0",
     "timed-out": "^4.0.1",
     "to-object-path": "^0.3.0",
@@ -257,7 +258,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "swagger": "node ./swagger.js"
   },
   "author": "Marta Alves",
   "license": "ISC",
@@ -269,6 +271,7 @@
     "express": "^4.18.2",
     "mongodb": "^4.13.0",
     "nodemon": "^2.0.20",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "swagger-autogen": "^2.22.0"
   }
 }
