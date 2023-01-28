@@ -4,8 +4,8 @@ const doc = {
     title: "My Conctacts",
     description: "Marta Contacts",
   },
-  host: "localhost:8080",
-  schemes: ["http"],
+  host: "cs341-week-2-personal.onrender.com",
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger.json";

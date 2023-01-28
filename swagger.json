@@ -5,10 +5,10 @@
     "description": "Marta Contacts",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cs341-week-2-personal.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
